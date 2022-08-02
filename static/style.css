@@ -1,0 +1,21 @@
+/* body=============================================================== */
+
+body {
+    background: url(images/logo_background.png);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+/* Container========================================================== */
+.container {
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: auto;
+    margin-left: auto;
+    border:10px;
+    border-style: solid;
+    border-color: red;
+}
