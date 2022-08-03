@@ -249,15 +249,15 @@ app.post("/home", async (req, res) => {
  });
  
  //DELETE============================================================================================
-//  app.delete("/home/:id", async (req, res) => {
-//     try {
-//        const id = req.params.id;
-//        const deletePost = await pool.query("DELETE FROM forum WHERE post_id = $1",[id]);
-//        res.send("Thanks for cleaning out your trash");
-//     } catch (error) {
-//        res.send(error.message);
-//     }
-//  });
+ app.delete("/home/:id", async (req, res) => {
+    try {
+       const id = req.params.id;
+       const deletePost = await pool.query("DELETE FROM forum WHERE post_id = $1",[id]);
+       res.send("Thanks for cleaning out your trash");
+    } catch (error) {
+       res.send(error.message);
+    }
+ });
  
  app.delete("/home/users/:id", async (req, res) => {
     try {

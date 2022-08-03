@@ -8,24 +8,66 @@
     <link rel="stylesheet" href ="style.css">
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script defer src="app.js"></script>
-    <title>Metroid Prime</title>
+    <title>Project M - </title>
 </head>
-    <div class = "primary-nav-bar">
-        <div><a id='link'>Home</a></div>
-        <div><a id='link'>Prime Series</a></div>
-        <div><a id='link'>Coming Soon</a></div>
-    </div>
+<body>
     <div class = "container">
-        <h3 id = "forum">Metroid Forum</h3>
+        <header id ="scrap_header">
+            <div class="row1">
+                <div class="icons">
+                    <ul>
+                        <li><img class ="prime_logo" src="images/prime.png" target="_blank"></li>
+                        <li><img class ="baby_metroid" src="images/metroid.png" target="_blank"></li>
+                        <li><img class ="gamecube" src="images/gamecube.png" target="_blank"></li>
+                        <li><img class ="wii" src="images/wii.png" target="_blank"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class= "row2">
+                <div class = "logo">Metroid Prime</div>
+            </div>
+            <div class= "row3">
+                <div class = "logo">Fanbase</div>
+            </div>
+            <div id="top-menu-search-box">
+                <form name ="search">
+                    <input type="text" name="search_text" class="search-input" value="Search..." size="30">
+                    <input type ="submit" value="search" class="search-button">
+                </form>
+            </div>
+        <div class = "primary-nav-bar">
+            <ul class ="top-menu-links">
+                <li><a href="/" id='home' class = "top-link">Home</a></li>
+                <li><a href="/games" id='games' class = "top-link">Prime Series</a></li>
+                <li><a href="#" id='future' class = "top-link">Coming Soon</a></li>
+                <li><a href="#" id='future' class = "top-link">Coming Soon</a></li>
+            </ul>
+            <!-- <div class ="spacer"></div> -->
+            <div id="popup-menu-games" class="show-popup-menu" style="display: none;">
+                <div class = "column-container">
+                    <div class ="column">
+                        <ul class="sub-menu-links">
+                            <li><a class="Prime" href="/games/1">Metroid Prime</a></li>
+                            <li><a class="Prime2" href="/games/2">Metroid Prime 2: Echoes</a></li>
+                            <li><a class="Prime3" href="/games/3">Metroid Prime 3: Corruption</a></li>
+                            <li><a class="primeHunters" href="/games/4">Metroid Prime 3: Corruption</a></li>
+                            <li><a class="primeForce" href="/games/5">Metroid Prime: Federation Force</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
         <ul class = "secondary-nav-bar">
-            <div id = "postBtn">Post</div>
-            <div id = "upgrades">Upgrades</div>
-            <div id = "maps">Coming Soon</div>
-            <div id = "strategy_guide">Coming Soon</div>
+            <li id = "postBtn">Post</li>
+            <li id = "upgrades">Upgrades</li>
+            <li id = "maps">Coming Soon</li>
+            <li id = "strategy_guide">Coming Soon</li>
         </ul>
+    </header>
+        <h3 id = "forum">
+            <div class = "row4">Forum</div> 
+        </h3>
         <div class ="messageBox"></div>
     </div>
-<body>
-    
 </body>
 </html>
