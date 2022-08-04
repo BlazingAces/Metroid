@@ -82,7 +82,7 @@ const newForum = (data) => {
       title.setAttribute("contentEditable", "true");
       body.setAttribute("contentEditable", "true");
       title.style.backgroundColor = "darkgray";
-      body.style.backgroundColor = "gray";
+      body.style.backgroundColor = "darkgray";
       submitButton.style.display = "block";
       deleteButton.style.display = "block";
       cancelButton.style.display = "block";
@@ -125,7 +125,7 @@ const newForum = (data) => {
         title.setAttribute("contentEditable", "false");
         body.setAttribute("contentEditable", "false");
         title.style.backgroundColor = "darkgray";
-        body.style.backgroundColor = "gray";
+        body.style.backgroundColor = "darkgray";
         submitButton.style.display = "none";
         deleteButton.style.display = "none";
         cancelButton.style.display = "none";
@@ -139,7 +139,7 @@ const newForum = (data) => {
 };
 
 //[Patch Function]==================================================================================
-function approvedEdit() {
+let approvedEdit = () => {
   let newBox = document.createElement("div");
   newBox.setAttribute("id", "postEdit");
 
@@ -169,8 +169,9 @@ function approvedEdit() {
   messageBox.prepend(newBox);
 }
 approvedEdit();
+
 //[Delete Function]==================================================================================
-function removeContent() {
+let removeContent = () => {
   let deleteBox = document.createElement("div");
   deleteBox.setAttribute("id", "approvedDelete");
 
@@ -199,6 +200,7 @@ function removeContent() {
 }
 
 removeContent();
+
 //[New Post]=======================================================================================
 const generatePost = () => {
   const newPost = document.createElement("div");
@@ -271,6 +273,7 @@ const generatePost = () => {
   });
 };
 generatePost();
+
 //[Search Bar]========================================================================================================
 
 //[Games]=============================================================================================================
