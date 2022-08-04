@@ -232,6 +232,26 @@ app.post("/home", async (req, res) => {
 
 //Patch==============================================================================================
 
+app.patch("/home/:id", async (req, res) => {
+    const id = req.params.id;
+    try {
+       const data = await pool.query(
+          "SELECT * FROM forum WHERE post_id = $1",
+          [id]
+       );
+       const body = req.body;
+       const editTitle = body.title || data.rows[0].title;
+       const editBody = body.post || data.rows[0].post;
+       const editPost = await pool.query(
+          "UPDATE forum SET title = $1, post = $2 WHERE post_id = $3",
+          [editTitle, editBody, id]
+       );
+       res.json("Your post has been updated");
+    } catch (err) {
+       res.send(err.message);
+    }
+ });
+
  app.patch("/home/user/:id", async (req, res) => {
     const id = req.params.id;
     try {
