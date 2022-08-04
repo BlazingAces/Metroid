@@ -124,8 +124,8 @@ const newForum = (data) => {
       cancelButton.addEventListener("click", () => {
         title.setAttribute("contentEditable", "false");
         body.setAttribute("contentEditable", "false");
-        title.style.backgroundColor = "transparent";
-        body.style.backgroundColor = "transparent";
+        title.style.backgroundColor = "darkgray";
+        body.style.backgroundColor = "gray";
         submitButton.style.display = "none";
         deleteButton.style.display = "none";
         cancelButton.style.display = "none";
