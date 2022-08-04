@@ -213,16 +213,16 @@ const generatePost = () => {
   const newPostBox = document.createElement("form");
   newPost.append(newPostBox);
 
-  const messageTitle = document.createElement("input");
-  messageTitle.setAttribute("id", "messageTitle");
-  messageTitle.setAttribute("placeholder", "Title");
-  newPostBox.append(messageTitle);
-
   const newUser = document.createElement("input");
   newUser.setAttribute("id", "newUser");
   newUser.setAttribute("placeholder", "Username");
   newUser.setAttribute("required", "");
   newPostBox.append(newUser);
+
+  const messageTitle = document.createElement("input");
+  messageTitle.setAttribute("id", "messageTitle");
+  messageTitle.setAttribute("placeholder", "Title");
+  newPostBox.append(messageTitle);
 
   const textBox = document.createElement("textarea");
   textBox.setAttribute("id", "bodyText");
