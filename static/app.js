@@ -111,7 +111,7 @@ const newForum = (data) => {
         let remove = document.getElementById("approvedDelete");
         remove.style.display = "block";
 
-        await fetch(`${herokuURL}/home/${id}`, {
+        await fetch(`/home/${id}`, {
           method: "DELETE",
           headers: { "Content-Type": "application/json" },
         });
@@ -262,7 +262,7 @@ const generatePost = () => {
         post: textValue,
       };
 
-      await fetch(`${herokuURL}/home`, {
+      await fetch("/home", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newPost),
