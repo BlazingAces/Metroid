@@ -81,6 +81,8 @@ const newForum = (data) => {
 
       title.setAttribute("contentEditable", "true");
       body.setAttribute("contentEditable", "true");
+      title.style.backgroundColor = "darkgray";
+      body.style.backgroundColor = "gray";
       submitButton.style.display = "block";
       deleteButton.style.display = "block";
       cancelButton.style.display = "block";
