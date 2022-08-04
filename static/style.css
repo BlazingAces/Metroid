@@ -126,14 +126,11 @@ li:last-child {
     display: block;
     padding: 20px;
     font-size: 20px;
+    text-decoration: none;
 }
 
 .top-menu-links > li:hover {
     background-color: brown;
-}
-
-.top-menu-links > a:link { 
-    text-decoration: none;
 }
 
 .top-link {
