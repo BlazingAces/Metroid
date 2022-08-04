@@ -5,11 +5,11 @@ const updgrade = document.querySelector("#upgrade");
 const homeBtn = document.querySelector("#home");
 
 // let localURL = "http://localhost:8000";
-let URL = "https://obscure-coast-37313.herokuapp.com/";
+let herokuURL = "https://obscure-coast-37313.herokuapp.com/";
 
 // fetch all
 let getAllPosts = async () => {
-  const res = await fetch(`${URL}/home`);
+  const res = await fetch(`${herokuURL}/home`);
   const data = await res.json();
   newForum(data);
 };
@@ -99,7 +99,7 @@ const newForum = (data) => {
           post: editMiddle,
         };
 
-        await fetch(`${URL}/home/${id}`, {
+        await fetch(`${herokuURL}/home/${id}`, {
           method: "PATCH",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(changedPost),
@@ -111,7 +111,7 @@ const newForum = (data) => {
         let remove = document.getElementById("approvedDelete");
         remove.style.display = "block";
 
-        await fetch(`${URL}/home/${id}`, {
+        await fetch(`${herokuURL}/home/${id}`, {
           method: "DELETE",
           headers: { "Content-Type": "application/json" },
         });
@@ -259,7 +259,7 @@ const generatePost = () => {
         post: textValue,
       };
 
-      await fetch(`${URL}/home`, {
+      await fetch(`${herokuURL}/home`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newPost),
