@@ -8,7 +8,7 @@ let herokuURL = "https://obscure-coast-37313.herokuapp.com";
 
 // [fetch All]===========================================================================
 let getAllPosts = async () => {
-  const res = await fetch(`${herokuURL}/home`);
+  const res = await fetch("/home");
   const data = await res.json();
   newForum(data);
 };
