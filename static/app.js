@@ -1,3 +1,5 @@
+//[variables]============================================================================
+
 const container = document.querySelector(".container");
 const messageBox = document.querySelector(".messageBox");
 const postBtn = document.querySelector("#postBtn");
@@ -69,8 +71,10 @@ const newForum = (data) => {
 
     edit.addEventListener("click", (e) => {
       const id = e.target.id;
+      console.log(id);
       const access = document.querySelectorAll(".post");
       for (let i = 0; i < access.length; i++) {
+        console.log(access[i]);
         if (access[i].id !== id) {
           access[i].style.display = "none";
         }
