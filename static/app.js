@@ -4,8 +4,6 @@ const postBtn = document.querySelector("#postBtn");
 const updgrade = document.querySelector("#upgrade");
 const homeBtn = document.querySelector("#home");
 
-let herokuURL = "https://obscure-coast-37313.herokuapp.com";
-
 // [fetch All]===========================================================================
 let getAllPosts = async () => {
   const res = await fetch("/home");
@@ -99,7 +97,7 @@ const newForum = (data) => {
           post: editMiddle,
         };
 
-        await fetch(`${herokuURL}/home/${id}`, {
+        await fetch(`/home/${id}`, {
           method: "PATCH",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(changedPost),
@@ -119,7 +117,6 @@ const newForum = (data) => {
 
       submitButton.addEventListener("click", sendNewInfo);
       deleteButton.addEventListener("click", removePost);
-
       cancelButton.addEventListener("click", () => {
         title.setAttribute("contentEditable", "false");
         body.setAttribute("contentEditable", "false");
