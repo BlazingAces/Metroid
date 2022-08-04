@@ -71,7 +71,6 @@ const newForum = (data) => {
 
     edit.addEventListener("click", (e) => {
       const id = e.target.id;
-
       const access = document.querySelectorAll(".post");
       for (let i = 0; i < access.length; i++) {
         if (access[i].id !== id) {
