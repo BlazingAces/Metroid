@@ -98,9 +98,6 @@ li:last-child {
     right: 34.8%;
 }
 
-.row1 {
-    right:0%;
-}
 /* navbar=============================================================== */
 .primary-nav-bar {
     display: flex;
@@ -224,7 +221,6 @@ li:last-child {
     width: 770px;
     margin-right: auto;
     margin-left: auto;
-    border-style: solid;
     background: url(images/content_bg.gif) repeat-y;
     background-color: #550000;
 }
@@ -259,10 +255,14 @@ li:last-child {
 }
 
 .post > #postInfo {
-    background-color: red;
+    background: url(images/news_date_bg.gif) no-repeat;
+    background-size: cover;
     border-radius: 7px 7px 0px 0px;
     padding-left: 1%;
     padding-right: 1%;
+    color: lightgreen;
+    font-size: 18px;
+
 }
 
 #postEdit {
@@ -371,8 +371,8 @@ li:last-child {
     display: none;
     font-size: 10px;
     float: right;
-    background-color: red;
-    border: solid red 1px;
+    background-color:brown;
+    border: solid black 1px;
 }
 
 #delete {
@@ -380,8 +380,8 @@ li:last-child {
     display: none;
     font-size: 10px;
     float: right;
-    background-color: red;
-    border: solid red 1px;
+    background-color:brown;
+    border: solid black 1px;
 }
 
 #cancel {
@@ -389,6 +389,12 @@ li:last-child {
     display: none;
     font-size: 10px;
     float: right;
-    background-color: red;
-    border: solid red 1px;
+    background-color:brown;
+    border: solid black 1px;
+}
+
+.edit {
+    float: right;
+    background: none;
+    border: none;
 }

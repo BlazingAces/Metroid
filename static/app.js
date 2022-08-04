@@ -4,12 +4,12 @@ const postBtn = document.querySelector("#postBtn");
 const updgrade = document.querySelector("#upgrade");
 const homeBtn = document.querySelector("#home");
 
-// let localURL = "http://localhost:8000";
+let localURL = "http://localhost:8000";
 let herokuURL = "https://obscure-coast-37313.herokuapp.com";
 
-// fetch all
+// [fetch All]===========================================================================
 let getAllPosts = async () => {
-  const res = await fetch(`${herokuURL}/home`);
+  const res = await fetch(`${localURL}/home`);
   const data = await res.json();
   newForum(data);
 };
@@ -69,7 +69,7 @@ const newForum = (data) => {
     cancelButton.textContent = "Cancel";
     editButton.append(cancelButton);
 
-    // Event Listener to Edit and Submit Changes
+
     edit.addEventListener("click", (e) => {
       const id = e.target.id;
 
@@ -86,7 +86,7 @@ const newForum = (data) => {
       deleteButton.style.display = "block";
       cancelButton.style.display = "block";
 
-      // Patch post
+//[Patch Request]===================================================================================
       let sendNewInfo = async () => {
         let editHeader = document.getElementById("title").textContent;
         let editMiddle = document.getElementById("body").textContent;
@@ -99,19 +99,19 @@ const newForum = (data) => {
           post: editMiddle,
         };
 
-        await fetch(`${herokuURL}/home/${id}`, {
+        await fetch(`${localURL}/home/${id}`, {
           method: "PATCH",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(changedPost),
         });
       };
 
-      // DELETE POST
+//[Delete Request]==========================================================================================
       let removePost = async () => {
         let remove = document.getElementById("approvedDelete");
         remove.style.display = "block";
 
-        await fetch(`${herokuURL}/home/${id}`, {
+        await fetch(`${localURL}/home/${id}`, {
           method: "DELETE",
           headers: { "Content-Type": "application/json" },
         });
@@ -137,6 +137,7 @@ const newForum = (data) => {
   }
 };
 
+//[Patch Function]==================================================================================
 function approvedEdit() {
   let newBox = document.createElement("div");
   newBox.setAttribute("id", "postEdit");
@@ -167,7 +168,7 @@ function approvedEdit() {
   messageBox.prepend(newBox);
 }
 approvedEdit();
-
+//[Delete Function]==================================================================================
 function removeContent() {
   let deleteBox = document.createElement("div");
   deleteBox.setAttribute("id", "approvedDelete");
@@ -197,7 +198,7 @@ function removeContent() {
 }
 
 removeContent();
-
+//[New Post]=======================================================================================
 const generatePost = () => {
   const newPost = document.createElement("div");
   newPost.setAttribute("id", "new-post");
@@ -259,7 +260,7 @@ const generatePost = () => {
         post: textValue,
       };
 
-      await fetch(`${herokuURL}/home`, {
+      await fetch(`${localURL}/home`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newPost),
@@ -269,3 +270,7 @@ const generatePost = () => {
   });
 };
 generatePost();
+//[Search Bar]=====================================================================================================
+//[Games]==========================================================================================================
+//[Upgrades]==========================================================================================================
+
