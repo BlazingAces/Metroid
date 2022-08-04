@@ -5,7 +5,7 @@ const updgrade = document.querySelector("#upgrade");
 const homeBtn = document.querySelector("#home");
 
 // let localURL = "http://localhost:8000";
-let herokuURL = "https://obscure-coast-37313.herokuapp.com/";
+let herokuURL = "https://obscure-coast-37313.herokuapp.com";
 
 // fetch all
 let getAllPosts = async () => {
