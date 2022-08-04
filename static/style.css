@@ -32,6 +32,7 @@ li:last-child {
     background: url(images/Metroid-HD-Wallpapers.jpg);
     background-size: cover;
     background-position: center;
+    background-position: 0px -60px;
 }
 
 /* Search=============================================================== */
@@ -260,7 +261,7 @@ li:last-child {
     border-radius: 7px 7px 0px 0px;
     padding-left: 1%;
     padding-right: 1%;
-    color: lightgreen;
+    color: white;
     font-size: 18px;
 
 }
