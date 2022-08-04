@@ -132,6 +132,10 @@ li:last-child {
     background-color: brown;
 }
 
+.top-menu-links > a:link { 
+    text-decoration: none;
+}
+
 .top-link {
     float:left;
     margin:0;
